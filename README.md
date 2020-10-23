@@ -8,8 +8,6 @@ This is a project created using the Django framework for Python.
 - Allows you to add cars to your personal Garage
 - Set up appointments for repair/service
 
-
-
 #Upcoming features
 - chat messaging system between the mechanic and the customer
 - direct invoice/ repair summary through the website
@@ -22,11 +20,10 @@ This is a project created using the Django framework for Python.
 -add a image of your car
  
 #Appointment Model
-
 -add street
--add City
--add State
--add ZIP
+- add City
+- add State
+- add ZIP
 
 #bugs/issues
 - removing cars 

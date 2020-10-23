@@ -21,11 +21,11 @@ This is a project created using the Django framework for Python.
  #garage
  -add a image of your car
  
- #Appointment Model 
- -add street
- -add City
- -add State
- -add ZIP
+#Appointment Model 
+-add street
+-add City
+-add State
+-add ZIP
 
 #bugs/issues
 - removing cars 

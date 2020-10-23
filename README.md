@@ -14,7 +14,7 @@ This is a project created using the Django framework for Python.
 - chat messaging system between the mechanic and the customer
 - direct invoice/ repair summary through the website
 
-##Appointment
+#Appointments
   - set a validation that doesnt allow users to set an appointment today and past.
   - set time slots
  

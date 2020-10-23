@@ -18,8 +18,8 @@ This is a project created using the Django framework for Python.
   - set a validation that doesnt allow users to set an appointment today and past.
   - set time slots
   
- #garage
- -add a image of your car
+#garage
+-add a image of your car
  
 #Appointment Model 
 -add street

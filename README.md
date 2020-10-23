@@ -24,9 +24,6 @@ This is a project created using the Django framework for Python.
  -add State
  -add ZIP
 
-
-
-
 #bugs/issues
 - removing cars 
 - removing appointments

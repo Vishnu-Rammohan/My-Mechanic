@@ -1,0 +1,96 @@
+{% extends 'registration/dashboard.html' %}
+
+{% block content %}
+
+{% load static %}
+<style>
+    .fill {
+        height: 320px;
+        width: 590px;
+    }
+    #car {
+        width: 256px;   
+        height: 150px;
+    }
+    .form-control{
+        height: auto;
+        width: auto;
+    }
+    ul{
+        list-style: none;
+    }
+    
+</style>
+{% for message in messages %}
+{% if message.tags == "success" %}
+<div class="alert alert-success alert-sm {{ message.tags }}" role="alert"> {{ message }}
+</div>
+{% endif %}
+{% if message.tags == "error" %}
+<div class="alert alert-danger alert-sm {{ message.tags }}" role="alert"> {{ message }}
+</div>
+{% endif %}
+{% endfor %}
+
+<h2 class="text-info">Garage</h2>
+<div class="fill" style="background-image:url({% static 'img/garage.jpg' %});"></div>
+
+<div class="card text-white bg-dark mb-3 d-inline-block" style="max-width: 20rem;">
+    <div class="card-header bg-dark">
+        
+    </div>
+    <h2 class="text-info">Your Cars</h2>
+    <div class="card-body">
+            {% for cars in all_cars %}
+            <br>
+            <h4 class="card-title">
+                <div id = "car" class="fill" style="background-image:url({% static 'img/car.png' %});"></div>
+            <ul>
+                <li>Car ID Number: {{cars.id}}</li>
+                <li>Car Make: {{cars.make}}</li>
+                <li>Car Make: {{cars.model}}</li> 
+                <li>Car Make: {{cars.year}}</li>
+            </ul>
+            </h4>
+            <br>
+            <a href="{% url 'del_car' %}">
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+            </a>          
+            <br>
+            {% endfor %}    
+    </div>
+</div>
+
+
+
+<div class="card">
+
+    <div class="card-body">
+        <h3 class="card-title"></h3>
+        <form method="POST" action="{% url 'Add_car' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="make">Make</label>
+                    <input type="text" class="form-control" id="make" name="make" placeholder="Honda" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" class="form-control" id="model" name="model" placeholder="Accord" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="text" class="form-control" id="year" name="year" placeholder="2019" required>
+                </div>
+                <button class="btn btn-success" name="submit">Add Car</button>
+                <input type="hidden" name="next" value="{% url 'My_car' %}" />
+        </form>
+        <br>
+    </div>
+</div>
+
+
+
+{% endblock %}

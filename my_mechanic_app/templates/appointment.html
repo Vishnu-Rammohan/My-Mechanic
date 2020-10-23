@@ -1,0 +1,49 @@
+{% extends 'registration/dashboard.html' %}
+
+{% block content %}
+{% for message in messages %}
+    {% if message.tags == "success" %}
+    <div class="alert alert-success alert-sm {{ message.tags }}" role="alert"> {{ message }} 
+    </div>
+    {% endif %}
+    {% if message.tags == "error" %}
+    <div class="alert alert-danger alert-sm {{ message.tags }}" role="alert"> {{ message }} 
+    </div>
+    {% endif %}
+    {% endfor %}
+<br>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Your Appointments</h4>
+        {% for appointment in all_appointments %}
+        <p class="card-text">
+            Your appointment is set for {{ appointment.date }} at {{ appointment.time }} on {{ appointment.address }}.
+        </p>
+        <a href="{% url 'cancel_appointment' %}" class="btn btn-danger btn-sm">Cancel Appointment</a>
+        {% endfor %}
+    </div>
+
+</div>
+<div class="card">
+    <h3 class="card-header"></h3>
+    <form method="POST" action="{% url 'make_appointment' %}">
+        {% csrf_token %}
+        <div class="card-body">
+            <label for="address">Address</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="address" name="address"
+                placeholder="Type Address Here" required>
+            <br>
+
+            <label>
+                <h4 class="card-title">Please select an appointment date</h4>
+            </label>
+            <input class="form-control" type="date" name="date" min="" required>
+            <br>
+            <input type="time" id="datePickerId" name="time" min="09:00" max="19:00" required>
+            <br><br>
+            <button name='submit' class="btn btn-primary btn-sm">Set Appointment</button>
+            <input type='hidden' name='next' value="{% url 'appointment' %}" />
+        </div>
+    </form>
+</div>
+{% endblock %}

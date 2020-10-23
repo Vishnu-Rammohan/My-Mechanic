@@ -27,5 +27,6 @@ This is a project created using the Django framework for Python.
 
 
 #bugs/issues
-- removing cars and appointments
-- 
+- removing cars 
+- removing appointments
+

@@ -17,10 +17,10 @@ This is a project created using the Django framework for Python.
   - set time slots
   
 #garage
--add a image of your car
+- add a image of your car
  
 #Appointment Model
--add street
+- add street
 - add City
 - add State
 - add ZIP

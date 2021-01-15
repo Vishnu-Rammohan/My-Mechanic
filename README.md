@@ -8,7 +8,7 @@ This is a project created using the Django framework for Python.
 - Allows you to add cars to your personal Garage
 - Set up appointments for repair/service
 - Responsive design work with mobile devices
-![](https://i.gyazo.com/21b9b98765840b106a8703bc50270ece.mp4)
+![](https://i.gyazo.com/21b9b98765840b106a8703bc50270ece.gif)
 
 #Upcoming features
 - chat messaging system between the mechanic and the customer

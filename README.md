@@ -10,6 +10,8 @@ This is a project created using the Django framework for Python.
 - Responsive design work with mobile devices
 ![](https://i.gyazo.com/21b9b98765840b106a8703bc50270ece.gif)
 
+![](https://i.gyazo.com/43b8828c02e42da827173179497b3894.gif)
+
 #Upcoming features
 - chat messaging system between the mechanic and the customer
 - direct invoice/ repair summary through the website

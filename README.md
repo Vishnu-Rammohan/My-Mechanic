@@ -1,4 +1,4 @@
-# my-mechanic
+# myMechanic
 
 ![Image of garage](https://i.gyazo.com/0bb9cf13c4597bcbebe9f06a16441ea6.png)
 
